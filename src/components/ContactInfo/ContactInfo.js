@@ -1,5 +1,6 @@
 import ContactButton from "../ContactButton/ContactButton";
 import { useEffect, useState } from "react";
+import ContactAvatar from "../ContactAvatar/ContactAvatar";
 
 // ICONS
 import StarIcon from "@mui/icons-material/Star";
