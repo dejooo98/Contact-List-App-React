@@ -45,7 +45,7 @@ const ContactTable = ({
                     <tr>
                         <th className="text-center col-1">+</th>
                         <th className="text-secondary col-5">Basic Info</th>
-                        <th className="text-secondary col-5">Phone</th>
+                        <th className="text-secondary col-4">Phone</th>
                         <th className="text-center p-1 col-1"></th>
                     </tr>
                 </thead>

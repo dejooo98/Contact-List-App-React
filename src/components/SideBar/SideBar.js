@@ -21,11 +21,11 @@ const SideBar = () => {
                             <PeopleIcon className=" sidebar__icon" />
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="./" className="nav-link  py-3 px-1  ">
                             <FavoriteIcon className="sidebar__icon" />
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>

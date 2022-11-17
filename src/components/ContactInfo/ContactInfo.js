@@ -35,7 +35,7 @@ const ContactInfo = (props) => {
         });
     }, [id, firstName, lastName, profilePhoto, email, favorite, phone]);
 
-    console.log(contact);
+    // console.log(contact);
 
     return (
         <div className="main-content-card">
@@ -47,7 +47,9 @@ const ContactInfo = (props) => {
                                 <div className="d-flex flex-column align-items-center text-center">
                                     <ContactAvatar
                                         name={
-                                            contact.fname + " " + contact.lname
+                                            contact.firstName +
+                                            " " +
+                                            contact.lastName
                                         }
                                         className={"info-avatar"}
                                     />

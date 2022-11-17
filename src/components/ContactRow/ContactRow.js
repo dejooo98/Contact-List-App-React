@@ -95,5 +95,4 @@ const ContactRow = ({
         </tr>
     );
 };
-
 export default ContactRow;
