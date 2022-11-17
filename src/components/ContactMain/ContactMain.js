@@ -5,6 +5,7 @@ import ContactInfo from "../ContactInfo/ContactInfo";
 import ContactTable from "../ContactTable/ContactTable";
 import DeleteModel from "../DeleteModel/DeleteModel";
 import ContactModel from "../ContactModel/ContactModel";
+import Favorites from "../ContactFavorites/Favorites";
 
 // ICONS
 import DeleteForeverSharpIcon from "@mui/icons-material/DeleteForeverSharp";
@@ -15,6 +16,7 @@ import "./ContactMain.scss";
 
 //Logo
 import Logo from "../../assets/contact-list.png";
+import LogoFav from "../../assets/favorite.png";
 
 const ContactMain = () => {
     const [contacts, setContacts] = useState(
@@ -29,6 +31,15 @@ const ContactMain = () => {
                       email: "dejan@gmail.com",
                       favorite: true,
                       phone: "0662454123",
+                  },
+                  {
+                      id: "_" + Math.random().toString(36).substr(2, 9),
+                      firstName: "Petar",
+                      lastName: "Petrovic",
+                      profilePhoto: "profile.png",
+                      email: "petar@gmail.com",
+                      favorite: false,
+                      phone: "0653443558",
                   },
               ]
     );
@@ -165,7 +176,7 @@ const ContactMain = () => {
                         </div>
                     </div>
                     <div className="row p-lg-5 pb-lg-0 pt-lg-0">
-                        <div className="col-lg-7 ">
+                        <div className="col-lg-8 ">
                             <ContactTable
                                 contacts={contacts}
                                 filterText={filterText}
@@ -179,7 +190,7 @@ const ContactMain = () => {
                                 setDeleteContactId={setDeleteContactId}
                             />
                         </div>
-                        <div className="col-lg-5">
+                        <div className="col-lg-4">
                             {isActive && (
                                 <ContactInfo
                                     activeContact={activeContact}
@@ -206,6 +217,31 @@ const ContactMain = () => {
                                 handleDelete={handleDelete}
                             />
                         )}
+                    </div>
+                    <div className="row lay">
+                        <div className="col-xl-12 d-flex ">
+                            <img src={LogoFav} alt="logo" className="logo" />
+                            <div className="main-content-header">
+                                <h3>Favorite Contacts</h3>
+                                <p>See all favorite contacts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <Favorites
+                                contacts={contacts}
+                                filterText={filterText}
+                                showActiveUser={showActiveUser}
+                                checkedContactIdList={checkedContactIdList}
+                                setCheckedContactIDList={
+                                    setCheckedContactIDList
+                                }
+                                handleShow={handleShow}
+                                setIsMultiDelete={setIsMultiDelete}
+                                setDeleteContactId={setDeleteContactId}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

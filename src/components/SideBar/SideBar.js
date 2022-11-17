@@ -2,7 +2,7 @@ import React from "react";
 //ICONS
 import SortIcon from "@mui/icons-material/Sort";
 import PeopleIcon from "@mui/icons-material/People";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
 // import { Link } from "react-router-dom";
 
 //STYLE FILES
