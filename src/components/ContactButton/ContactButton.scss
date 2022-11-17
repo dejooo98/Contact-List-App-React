@@ -1,0 +1,24 @@
+.custom-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #17417e 0%, #4177c5 100%);
+    box-shadow: 0 4px 15px 0 #17417e;
+    color: white !important;
+    border: none;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .custom-btn-icon {
+        height: 20px !important;
+        width: 20px !important;
+        margin-right: 5px;
+    }
+
+    &:hover {
+        color: white;
+    }
+}
